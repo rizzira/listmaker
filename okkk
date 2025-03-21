@@ -1,0 +1,9 @@
+from machine import Pin,ADC
+import time
+tanhai = ADC(Pin(14))
+
+tanhai.atten(ADC.ATTN_11DB)
+while True:
+    d = tanhai.read()
+    print (d)
+    time.sleep(0.2)
